@@ -11,6 +11,7 @@ codeunit 60000 "Meg Cleanup BO"
 
     local procedure DeleteEntryTables()
     begin
+        GLEntry.DELETEALL;
         CustLedgerEntry.DELETEALL;
         VendorLedgerEntry.DELETEALL;
         ItemLedgerEntry.DELETEALL;
@@ -135,6 +136,7 @@ codeunit 60000 "Meg Cleanup BO"
         PurchaseHeaderArchive.DELETEALL;
         SalesHeaderArchive.DELETEALL;
         InventoryAdjmtEntryOrder.DELETEALL;
+
     end;
 
 
@@ -266,4 +268,5 @@ codeunit 60000 "Meg Cleanup BO"
         PurchaseHeaderArchive: Record "Purchase Header Archive";
         SalesHeaderArchive: Record "Sales Header Archive";
         InventoryAdjmtEntryOrder: Record "Inventory Adjmt. Entry (Order)";
+
 }
